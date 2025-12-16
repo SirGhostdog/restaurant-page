@@ -4,7 +4,7 @@ class newDiv {
         this.element = document.querySelector(selector)
     }
 
-    setText(text) {
+    addText(text) {
 
         if (this.element) {
             this.element.textContent = text
@@ -13,7 +13,7 @@ class newDiv {
         return this;
     }
 
-    newElement (id, parent) {
+    newElement (id) {
         const newDiv = document.createElement('div')
 
         newDiv.id = id
@@ -25,7 +25,11 @@ class newDiv {
         return this
     }
 
-    // addStyle ()
+    addStyle(styleName, attribute) {
+
+        this.element.style[styleName] =  attribute
+        
+    }
 
     switchPage(eventType, callback){
         if (this.element) {
