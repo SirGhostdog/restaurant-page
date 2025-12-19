@@ -33,12 +33,5 @@ export function homePageLoader() {
     const centerText= new newDiv('#centerText')
 
         centerText.addText("This is my fusion restaraunt that incorporates fun and quirky ideas and yummy combination's that will make your stomach twirl with joy.")
- 
-    const menuButton = new newDiv("#menu")
-    function switchToMenu() {
-        window.location.href = "menu.js"
-        console.log("switch page")
-    }
-        menuButton.switchPage("click", switchToMenu)
 
 }

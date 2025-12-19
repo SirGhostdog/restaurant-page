@@ -1,9 +1,10 @@
 import { newDiv } from "./class.js"
 
-(() => {
+export function menuLoader() {
 
     const body = new newDiv("body")
         body.addStyle("backgroundColor", "rgb(212, 217, 119)")
+        body.addText("This is the menu.")
 
     // const content = new newDiv('#content')
     //     content.addStyle("display", "flex")
@@ -37,4 +38,4 @@ import { newDiv } from "./class.js"
 
     //     centerText.addText("This is my fusion restaraunt that incorporates fun and quirky ideas and yummy combination's that will make your stomach twirl with joy.")
  
-})();
+}
