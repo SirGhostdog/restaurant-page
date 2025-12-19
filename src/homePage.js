@@ -1,42 +1,44 @@
-class newDiv {
+import { newDiv } from "./class.js"
 
-    constructor(selector) {
-        this.element = document.querySelector(selector)
-    }
+export function homePageLoader() {
 
-    addText(text) {
+    const body = new newDiv("body")
+        body.addStyle("backgroundColor", "rgb(212, 217, 119)")
 
-        if (this.element) {
-            this.element.textContent = text
-        }
+    const content = new newDiv('#content')
+        content.addStyle("display", "flex")
+        content.addStyle("flex-direction", "column")
+        content.addStyle("align-items", "center")
+        content.addStyle("font-size", "32px")
+        content.addStyle("color","rgb(0, 0, 0)")
 
-        return this;
-    }
+        content.addText("Ghostdog's Dumpster Diner")
 
-    newElement (id) {
-        const newDiv = document.createElement('div')
+        content.newElement('centerBox')
 
-        newDiv.id = id
-        if (this.element) {
-            this.element.appendChild(newDiv)
-            console.log("success `${id}`")
-        }
+    const centerBox = new newDiv('#centerBox')
+        centerBox.addStyle("display", "flex")
+        centerBox.addStyle("align-items", "center")
+        centerBox.addStyle("justify-content", "center")
+        centerBox.addStyle("border", "1px black solid")
+        centerBox.addStyle("color","rgb(210, 214, 76)")
+        centerBox.addStyle("backgroundColor", "rgb(5, 105, 22)")
+        centerBox.addStyle("width", "40%")
         
-        return this
-    }
-
-    addStyle(styleName, attribute) {
-
-        this.element.style[styleName] =  attribute
+        centerBox.addStyle("padding", "10px")
+        centerBox.addStyle("font-size", "22px")
         
-    }
+        centerBox.newElement('centerText')
 
-    switchPage(eventType, callback){
-        if (this.element) {
-            this.element.addEventListener(eventType, callback)
-        }
-        return this;
+    const centerText= new newDiv('#centerText')
+
+        centerText.addText("This is my fusion restaraunt that incorporates fun and quirky ideas and yummy combination's that will make your stomach twirl with joy.")
+ 
+    const menuButton = new newDiv("#menu")
+    function switchToMenu() {
+        window.location.href = "menu.js"
+        console.log("switch page")
     }
+        menuButton.switchPage("click", switchToMenu)
+
 }
-
-export { newDiv }
