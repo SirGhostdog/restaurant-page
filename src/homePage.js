@@ -32,6 +32,6 @@ export function homePageLoader() {
 
     const centerText= new newDiv('#centerText')
 
-        centerText.addText("This is my fusion restaraunt that incorporates fun and quirky ideas and yummy combination's that will make your stomach twirl with joy.")
-
+        centerText.addText("This is my fusion restaraunt that incorporates fun and quirky ideas and yummy combinations that will make your stomach twirl with joy.")
+        
 }

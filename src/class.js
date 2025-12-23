@@ -13,7 +13,7 @@ class newDiv {
         return this;
     }
 
-    newElement (id) {
+    newElement(id) {
         const newDiv = document.createElement('div')
 
         newDiv.id = id
@@ -26,16 +26,14 @@ class newDiv {
 
     addStyle(styleName, attribute) {
 
-        this.element.style[styleName] =  attribute
+        if(this.element){
+            this.element.style[styleName] =  attribute
+        }
+        
+        return this
         
     }
 
-    switchPage(eventType, callback){
-        if (this.element) {
-            this.element.addEventListener(eventType, callback)
-        }
-        return this;
-    }
 }
 
 export { newDiv }

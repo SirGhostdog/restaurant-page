@@ -4,7 +4,19 @@ import { menuLoader } from "./menu.js";
 
 homePageLoader();
 
-const body = new newDiv('body')
-    body.switchPage("click", homePageLoader)
-    body.switchPage("click", menuLoader)
+const pageContent = document.getElementById("content")
+
+const home = document.getElementById("home");
+
+home.addEventListener("click", function(){
+    pageContent.replaceChildren()
+    homePageLoader()
+})
+
+const menu = document.getElementById("menu");
+
+menu.addEventListener("click", function(){
+    pageContent.replaceChildren()
+    menuLoader()
+})
 
