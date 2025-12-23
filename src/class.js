@@ -24,6 +24,15 @@ class newDiv {
         return this
     }
 
+    newSibling(id) {
+        const newSibling = document.createElement('div')
+
+        newSibling.id = id
+        if (this.element) {
+            this.element.insertAdjacentElement('afterend', newSibling)
+        }
+    }
+
     addStyle(styleName, attribute) {
 
         if(this.element){
